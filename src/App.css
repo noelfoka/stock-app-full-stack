@@ -1,38 +1,112 @@
-.App {
-  text-align: center;
+/*For NavBar*/
+
+.navBar {
+  margin-top: 1%;
+  background-color: white;
+  display: flex;
+  width: 100%;
+  height: 50px;
+  justify-content: space-evenly;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.navTab {
+  background-color: #4682B4;
+  width: 45%;
+  /*Using flex box to center items below.*/
+  display: flex;
+  /*Below used to position exactly in the center (horizontally and vertically) 
+  when using flex-box. The first centers along the cross-axis (vertical) and
+  the second centers along the main axis (horizontal). 
+  Both of the below should be used in tandem to center text in divs*/
+  align-items: center;
+  justify-content: center;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
+.navLink {
+  color: white;
+  font-size: 20px;
 }
 
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+/*For Home*/
+.mainHome{
+  /*Displays items stacked in a centered column.*/
   display: flex;
   flex-direction: column;
   align-items: center;
+}
+
+.h1Home{
+  font-size: large;
+}
+
+.searchBar{
+  margin: 10%;
+  width: 400px;
+  height: 50px;
+}
+
+.query{
+  width: 300px;
+  height: 50px;
+}
+
+.homeButton1{
+  width: 100px;
+  height: 50px;
+}
+
+.homeButton2{
+  width: 100px;
+  height: 25px;
+  margin: 5px;
+}
+
+.stockInfo{
+  font-size: 35px;
+  align-items: left;
+}
+
+/*For MyStocks*/
+.mainMyStocks{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.h1MyStocks{
+  font-size: large;
+}
+
+.stockList{
+  font-size: large;
+}
+
+.deleteStockButton{
+  font-size: large;
+}
+
+/*For StarterPage*/
+
+.mainStarterPage{
+  background-color: white;
+  width: 100%;
+  height: 100vh;
+  display: flex;
+  align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
+}
+
+.starter{
+  background-color: #4682B4;
+  display: flex;
+  width: 200px;
+  height: 100px;
+  align-items: center;
+  justify-content: center;
+}
+
+.starterPageButton{
+  font-size: 30px;
   color: white;
-}
-
-.App-link {
-  color: #61dafb;
-}
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+  font-family: monospace;                      
 }
