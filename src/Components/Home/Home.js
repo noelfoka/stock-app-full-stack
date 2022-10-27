@@ -89,7 +89,7 @@ export function Home(){
               <h1 className='h1Home'>Home</h1>
               <div>
                   <form className='searchBar'> 
-                    <input type='search' className='query' id='searchBar' placeholder='Get stock price by entering ticker symbol...'></input>
+                    <input type='search' className='query' id='searchBar' placeholder='Get stock price by entering ticker symbol...' autocomplete="off"></input>
                     <button type= 'button' className='homeButton1' onClick={handleClick}>Submit</button>
                   </form>
               </div>
