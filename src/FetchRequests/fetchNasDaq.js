@@ -1,3 +1,4 @@
+//This function sends a GET request to an external Nasdaq stock pricing API.
 
 export async function fetchNasDaq(stockName){
 
@@ -5,26 +6,30 @@ export async function fetchNasDaq(stockName){
     
     const options = {
         method: 'GET',
-        url: 'https://nasdaq-stock-pricing.p.rapidapi.com/Stock/GetPrice/AAPL',
         headers: {
           'X-RapidAPI-Key': '31c543575cmsh55786b255aeaad9p1ae1c8jsn747eaf40d71d',
           'X-RapidAPI-Host': 'nasdaq-stock-pricing.p.rapidapi.com'
         }
-      };
+    };
 
    try{
         const response= await fetch(url, options);
-        if (response.ok){
-            const data= await response.json();
-            return data;
+        try{
+            if (response.ok){
+                let data= await response.json();
+                data=data.toFixed(2);
+                return data;
+            }
         }
-        else {
-            console.log('Failure. Error: ' + response.status);
-            throw Error;
+        //To catch http errors.
+        catch(error) {
+            throw error;
+            return undefined;
         }
     }
+    //To catch network errors.
     catch (error){
-        window.alert('The request for the stock data has failed!');
+        throw error;
         return undefined;
     } 
 }

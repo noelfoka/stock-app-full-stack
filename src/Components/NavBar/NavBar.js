@@ -1,5 +1,8 @@
 import {NavLink} from 'react-router-dom';
 
+
+
+//This creates a navigation bar at the top of the app.
 export function NavBar(){
     return (
             <nav className='navBar'>

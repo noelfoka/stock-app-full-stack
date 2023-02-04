@@ -12,12 +12,7 @@
 .navTab {
   background-color: #4682B4;
   width: 45%;
-  /*Using flex box to center items below.*/
   display: flex;
-  /*Below used to position exactly in the center (horizontally and vertically) 
-  when using flex-box. The first centers along the cross-axis (vertical) and
-  the second centers along the main axis (horizontal). 
-  Both of the below should be used in tandem to center text in divs*/
   align-items: center;
   justify-content: center;
 }
@@ -28,42 +23,45 @@
 }
 
 /*For Home*/
-.mainHome{
-  /*Displays items stacked in a centered column.*/
+.homePage{
   display: flex;
   flex-direction: column;
   align-items: center;
 }
 
 .h1Home{
-  font-size: large;
+  font-size: 20px;
 }
 
-.searchBar{
+.queryBar{
   margin: 10%;
-  width: 400px;
+  width: 60%;
   height: 50px;
+  
 }
 
 .query{
-  width: 300px;
+  width: 70%;
   height: 50px;
 }
 
-.homeButton1{
-  width: 100px;
-  height: 50px;
+.homeSubmitButton{
+  width: 20%;
+  height: 55px;
 }
 
-.homeButton2{
+.fetchedStock{
+  display: flex;
+  width: 50%;
+  height: 50px;
+  align-items: center;
+  justify-content: space-evenly;
+}
+
+.homeSaveButton{
   width: 100px;
   height: 25px;
   margin: 5px;
-}
-
-.stockInfo{
-  font-size: 35px;
-  align-items: left;
 }
 
 /*For MyStocks*/
@@ -71,18 +69,30 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  width: 100%;
 }
 
 .h1MyStocks{
   font-size: large;
 }
 
-.stockList{
+.stockBundle{
+  display: flex;
+  gap: 5px;
+  justify-content: left;
+  align-items: center;
+  width: 70%;
   font-size: large;
 }
 
 .deleteStockButton{
   font-size: large;
+  margin: 10px, 10px;
+}
+
+.refetchStockPriceButton{
+  font-size: large;
+  margin: 10px, 10px;
 }
 
 /*For StarterPage*/
