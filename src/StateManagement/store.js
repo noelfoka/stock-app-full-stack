@@ -4,8 +4,6 @@ import {persistStore, persistReducer} from 'redux-persist';
 import storage from "redux-persist/lib/storage";
 import thunk from 'redux-thunk';
 
-
-
 //This store file uses Redux store object to manage global state.
 //A library is imported to enable data to persist in local storage.
 

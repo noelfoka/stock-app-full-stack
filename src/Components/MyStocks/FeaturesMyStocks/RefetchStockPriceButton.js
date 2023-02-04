@@ -8,7 +8,6 @@ export function RefetchStockPriceButton(props){
 
     async function refetchStockPrice(){
         let newPrice = await fetchNasDaq(props.name);
-        console.log(newPrice);
         await props.handleSaveStock(props.name, newPrice);
     }
 

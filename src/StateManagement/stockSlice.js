@@ -11,15 +11,12 @@ export const stockReducer = (state=initialState, action)=>{
         case 'SAVE_STOCK':
             //If stock details are already found in state, return same state without modifications.
             if (state.savedStocks.find(element => element.name===action.payload.name && element.price===action.payload.price )){
-                console.log(action.payload);
                 return state;
             }
             //If stock exists in state but has a different price, replace stock with new details.
             else if(state.savedStocks.find(element => element.name===action.payload.name && element.price!=action.payload.price )){
                 let replace=state.savedStocks.find(element => element.name===action.payload.name)
-                console.log(replace);
                 let filteredStocks= state.savedStocks.filter((element)=>element.name!=replace.name);
-                console.log(filteredStocks);
                 return {...state, savedStocks: [...filteredStocks, {name: action.payload.name, price: action.payload.price}]}
             }
             //If stock doesn't exist in state, add stock to state.

@@ -45,9 +45,7 @@ export function App() {
   async function getAllStocksDBHandler(){
 
     let stocksDB= await getAllStocksDB();
-      console.log( await stocksDB);
      await stocksDB.map(async(item, i)=>{
-      console.log(item.ticker_symbol, item.price);
       await dispatch(await saveStock(await item.ticker_symbol, item.price));
     })
   }
