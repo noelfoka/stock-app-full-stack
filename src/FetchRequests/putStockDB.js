@@ -3,7 +3,7 @@
 
 export async function putStockDB(stockName, price){
 
-    const url= 'http://localhost:8080/saveStock/:ticker';
+    const url= process.env.REACT_APP_API_URL+'/saveStock/:ticker';
     
     const options = {
         method: 'PUT',

@@ -2,9 +2,9 @@
 // server. It returns the names and prices of all stocks saved in the postgres database.
 
 export async function getAllStocksDB(){
-
-    const url= 'http://localhost:8080/getAllStocks';
     
+    const url= process.env.REACT_APP_API_URL+'/getAllStocks';
+
     const options = {
         method: 'GET',
         headers:{Accept: 'application.json', 'Content-Type': 'application/json'}

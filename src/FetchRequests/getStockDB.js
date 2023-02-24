@@ -3,7 +3,7 @@
 
 export async function getStockDB(stockName){
 
-    const url= 'http://localhost:8080/getStock/'+stockName;
+    const url= process.env.REACT_APP_API_URL+'/getStock/'+stockName;
     
     const options = {
         method: 'GET',

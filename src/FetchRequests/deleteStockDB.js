@@ -3,7 +3,7 @@
 
 export async function deleteStockDB(stockName){
 
-    const url= 'http://localhost:8080/deleteStock';
+    const url= process.env.REACT_APP_API_URL+'/deleteStock';
     
     const options = {
         method: 'DELETE',
