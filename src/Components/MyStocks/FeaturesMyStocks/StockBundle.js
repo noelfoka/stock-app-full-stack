@@ -25,7 +25,6 @@ export function StockBundle(props){
     }, [list]);
 
     useEffect( () => {
-        console.log(stocksState);
         let count=store.getState().stocks.savedStocks.length;
         if(count===0){
             count++;

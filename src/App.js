@@ -43,7 +43,6 @@ export function App() {
   //This function gets all stock and their details (name and price) 
   //from the backend postgres database and saves it to global state.
   async function getAllStocksDBHandler(){
-
     let stocksDB= await getAllStocksDB();
      await stocksDB.map(async(item, i)=>{
       await dispatch(await saveStock(await item.ticker_symbol, item.price));
