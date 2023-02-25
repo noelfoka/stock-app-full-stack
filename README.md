@@ -2,6 +2,8 @@
 
 This app provides users the ability to fetch and view current stock price by entering stock ticker symbol. The user can also save a list of stock data that is stored under the 'My Stocks' navigation tab.  
 
+[Stock App Tutorial](https://www.youtube.com/watch?v=qaXcbU_kKMs)
+
 ## Languages and Frameworks
 This app uses the React.js framework and Redux library for programming in JavaScript. 
 Other libraries have been imported and selectively used as well.
